@@ -1,0 +1,544 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background-color: #e66e00;
+  z-index: 2;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+header h1 {
+  margin-top: 0;
+  font-size: 2rem;
+  flex-grow: 1;
+}
+header nav {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+header ul {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border-radius: 20px;
+  background-color: #949494;
+}
+header li {
+  padding: 10px;
+}
+header li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  nav {
+    flex-direction: column;
+  }
+  .navInfo,
+  .navLogin {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .navInfo,
+  .navLogin {
+    flex-direction: column; /* Ändrar till kolumnlayout på mycket små skärmar */
+    align-items: center;
+  }
+}
+/*
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 100%;
+  height: 100px;
+  // background-color: #ffd700; //yellow
+  background-color: #e66e00;
+
+  h1 {
+    margin-top: 25px;
+    font-size: 2.5rem;
+  }
+
+  nav {
+    margin-top: 25px;
+    height: 50px;
+    display: flex;
+    ul {
+      //      background-color: #6495ed; // blue
+      background-color: #949494;
+      display: flex;
+      flex-direction: row;
+      border-radius: 20px;
+      justify-content: center;
+      justify-items: center;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .navInfo {
+      float: right;
+    }
+    .navLogin {
+      margin-left: 40%;
+    }
+
+    li {
+      margin: 10px;
+      margin-top: 15px;
+      a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+    }
+  }
+}
+**/
+main {
+  /* section {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    h1 {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 3rem;
+    }
+    h2 {
+      position: absolute;
+      font-size: 2.5rem;
+    }
+  } */
+}
+main section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 100px;
+}
+main section h1 {
+  margin-top: 70px;
+  font-size: 3rem;
+}
+main section h2 {
+  margin-top: 15px;
+  font-size: 2.5rem;
+}
+
+article div img {
+  height: 125px;
+  width: 125px;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  background-color: #e66e00;
+  width: 100%;
+  height: 50px;
+}
+
+.logSignContainer {
+  align-content: center;
+  justify-content: center;
+  margin: 80px;
+  display: flex;
+  flex-direction: row;
+}
+.logSignContainer .signupContainer {
+  padding: 20px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  background-color: #b1b2b5;
+  align-items: center;
+}
+.logSignContainer .signupContainer form {
+  display: flex;
+  flex-direction: column;
+}
+.logSignContainer .signupContainer form input {
+  margin: 5px;
+  width: 100%;
+}
+.logSignContainer .signupContainer form button {
+  width: 50%;
+  transform: translateX(50%);
+}
+.logSignContainer .loginContainer {
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  background-color: #b1b2b5;
+}
+.logSignContainer .loginContainer form {
+  display: flex;
+  flex-direction: column;
+}
+.logSignContainer .loginContainer form input {
+  margin: 5px;
+  width: 100%;
+}
+.logSignContainer .loginContainer form button {
+  width: 50%;
+  transform: translateX(50%);
+}
+
+.addUpdateContainer {
+  align-content: center;
+  justify-content: center;
+  margin: 80px;
+  margin-left: 25%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #b1b2b5;
+  width: 600px;
+}
+.addUpdateContainer h2 {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+}
+.addUpdateContainer form {
+  padding: 20px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.addUpdateContainer form input {
+  margin: 5px;
+  width: 100%;
+}
+.addUpdateContainer form button {
+  margin-top: 10px;
+  width: 50%;
+}
+
+main .coursesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 20px;
+  margin-bottom: 100px;
+}
+
+main .coursesContainer > div {
+  flex: 1 1 45%;
+  margin: 20px;
+  margin-right: 40px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #6495ed;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+main .coursesContainer > div p {
+  color: white;
+  margin: 5px;
+}
+main .coursesContainer > div .course-name {
+  align-self: flex-start;
+  flex: 0 0 100%;
+  order: -1;
+  text-align: center;
+  font-size: 1.5rem;
+}
+main .coursesContainer > div .course-desc {
+  margin-right: 10%;
+  margin-left: 10%;
+}
+main .coursesContainer > div .teacher-name {
+  order: 4;
+}
+main .coursesContainer > div .course-price {
+  order: 3;
+}
+main .coursesContainer > div img {
+  border-radius: 10px;
+}
+main .coursesContainer > div button {
+  margin: 5px;
+  border-radius: 5px;
+  background-color: #ffd700;
+}
+main .coursesContainer > div button:hover {
+  background-color: white;
+}
+
+main .coursesContainer > div:last-child {
+  flex: 0 0 98%;
+}
+
+main .buyCoursesContainer div {
+  display: flex;
+  flex-direction: row;
+  border: #6495ed solid 3px;
+  border-radius: 5px;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+main .buyCoursesContainer div p {
+  padding: 1%;
+}
+main .buyCoursesContainer div .info-button {
+  display: none;
+}
+main .buyCoursesContainer div img {
+  height: 50px;
+  width: 50px;
+  margin-left: 4px;
+  border-radius: 30px;
+}
+main .buyCoursesContainer button {
+  align-items: center;
+  appearance: none;
+  background-color: #fcfcfd;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395a;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+main .buyCoursesContainer button:focus {
+  box-shadow: #d6d6e7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+}
+main .buyCoursesContainer button:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+main .buyCoursesContainer button:active {
+  box-shadow: #d6d6e7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+/*  
+ *<!-- HTML !-->
+<button class="button-30" role="button">Button 30</button>
+
+/* CSS from getcssscan.com 
+ */
+main .activeCoursesContainer div {
+  display: flex;
+  flex-direction: row;
+  border: #6495ed solid 3px;
+  border-radius: 5px;
+  background-color: #dee6e6;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+main .activeCoursesContainer div p {
+  padding: 1%;
+}
+main .activeCoursesContainer div .course-button {
+  display: none;
+}
+main .activeCoursesContainer div img {
+  height: 50px;
+  width: 50px;
+  margin-left: 4px;
+  border-radius: 30px;
+}
+main .activeCoursesContainer div button {
+  border-radius: 15px;
+  background-color: #949494;
+  color: #ffffff;
+  margin-right: 4px;
+}
+main .activeCoursesContainer div button button.active {
+  background-color: red;
+  color: yellow;
+}
+
+/*# sourceMappingURL=index.css.map */

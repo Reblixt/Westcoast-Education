@@ -1,0 +1,42 @@
+main {
+  .activeCoursesContainer {
+    div {
+      display: flex;
+      flex-direction: row;
+      border: #6495ed solid 3px;
+      border-radius: 5px;
+      background-color: #dee6e6;
+      margin: 10px;
+      justify-content: center;
+      align-items: center;
+      margin-left: 3%;
+      margin-right: 3%;
+
+      p {
+        padding: 1%;
+      }
+
+      .course-button {
+        display: none;
+      }
+
+      img {
+        height: 50px;
+        width: 50px;
+        margin-left: 4px;
+        border-radius: 30px;
+      }
+
+      button {
+        border-radius: 15px;
+        background-color: #949494;
+        color: #ffffff;
+        margin-right: 4px;
+        button.active {
+          background-color: red;
+          color: yellow;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="../content/css/index.css" rel="stylesheet" />
+    <script src="../dist/script/app.js" type="module" defer></script>
+    <title>Westcoast Education</title>
+  </head>
+  <body>
+    <header>
+      <img
+        src="../content/images/logo.png"
+        alt="Logo of the Schools icon"
+        class="navImg"
+        width="90px"
+        height="90px"
+      />
+      <h1 class="navtitle">Westcoast Education</h1>
+      <nav>
+        <ul id="navInfo" class="navInfo">
+          <li><a href="About-us-Page.html">About us |</a></li>
+          <li><a href="Contact-Page.html">Contact |</a></li>
+          <li><a href="../index.html">Courses</a></li>
+        </ul>
+        <ul id="navLogin" class="navLogin">
+          <li><a href="Login-Signup-Page.html"> Login | </a></li>
+          <li><a href="../admin/index.html"> Admin</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h1 class="pageTitle">Sign up and login Page</h1>
+      </section>
+      <div class="logSignContainer">
+        <article id="signupContainer" class="signupContainer">
+          <h2>Sign up here</h2>
+          <form id="signupForm" class="signupForm">
+            <input type="text" name="firstName" placeholder="First name" />
+            <input type="text" name="LastName" placeholder="Last name" />
+            <input type="email" name="email" placeholder="E-mail" />
+            <input type="text" name="address" placeholder="address" />
+            <input type="number" name="Phone" placeholder="Phone Number" />
+            <input type="password" name="password" placeholder="Password" />
+            <input
+              type="password"
+              name="repeatPassword"
+              placeholder="Repeat password"
+            />
+            <button type="submit" id="signupBtn" class="signupBtn">
+              Sign up
+            </button>
+          </form>
+        </article>
+
+        <article id="loginContainer" class="loginContainer">
+          <h2>Login</h2>
+          <form id="loginForm" class="loginForm">
+            <input type="email" name="email" placeholder="E-mail" />
+            <input type="password" name="password" placeholder="Password" />
+            <button type="submit" id="loginBtn" class="loginBtn">Login</button>
+          </form>
+        </article>
+      </div>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>

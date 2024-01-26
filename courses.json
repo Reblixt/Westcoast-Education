@@ -1,0 +1,274 @@
+{
+  "courses": [
+    {
+      "id": "101",
+      "courseName": "Beginner JavaScript",
+      "courseLength": "15 days",
+      "price": 1200,
+      "courseTeacher": "Alice Anderson",
+      "courseLocation": "Remote",
+      "imageUrl": "jsbeginner.png",
+      "firstCourseDate": "2024-02-01",
+      "secoundCourseDate": "2024-04-01",
+      "thirdCourseDate": "2024-06-01",
+      "courseDescription": "This course is designed for beginners and covers the fundamentals of JavaScript, including syntax, control structures, and basic web interaction."
+    },
+    {
+      "id": "102",
+      "courseName": "Advanced JavaScript",
+      "courseLength": "20 days",
+      "price": 1800,
+      "courseTeacher": "Bob Brown",
+      "courseLocation": "Remote",
+      "imageUrl": "jsadvance.png",
+      "firstCourseDate": "2024-03-01",
+      "secoundCourseDate": "2024-05-01",
+      "thirdCourseDate": "2024-07-01",
+      "courseDescription": "Aimed at developers with basic JavaScript knowledge, this course dives into advanced topics like asynchronous programming, closures, and advanced DOM manipulation."
+    },
+    {
+      "id": "103",
+      "courseName": "Master JavaScript",
+      "courseLength": "30 days",
+      "price": 2500,
+      "courseTeacher": "Cathy Clark",
+      "courseLocation": "In-person, Tech Campus",
+      "imageUrl": "jsmaster.png",
+      "firstCourseDate": "2024-04-01",
+      "secoundCourseDate": "2024-08-01",
+      "thirdCourseDate": "2024-12-01",
+      "courseDescription": "For experienced JavaScript developers, this course covers complex concepts such as functional programming, JavaScript engines, and performance optimization."
+    },
+    {
+      "id": "201",
+      "courseName": "Beginner React",
+      "courseLength": "14 days",
+      "price": 1300,
+      "courseTeacher": "David Davis",
+      "courseLocation": "Remote",
+      "imageUrl": "reactbeginner.png",
+      "firstCourseDate": "2024-02-15",
+      "secoundCourseDate": "2024-05-15",
+      "thirdCourseDate": "2024-08-15",
+      "courseDescription": "Ideal for newcomers to frontend development, this course covers the basics of React, including JSX, components, and state management in a hands-on learning environment."
+    },
+    {
+      "id": "202",
+      "courseName": "Advanced React",
+      "courseLength": "21 days",
+      "price": 1900,
+      "courseTeacher": "Eva Evans",
+      "courseLocation": "Remote",
+      "imageUrl": "reactadvance.png",
+      "firstCourseDate": "2024-03-10",
+      "secoundCourseDate": "2024-06-10",
+      "thirdCourseDate": "2024-09-10",
+      "courseDescription": "Targeting developers with some React experience, this course delves into more complex topics like React Hooks, Context API, and advanced state management techniques."
+    },
+    {
+      "id": "203",
+      "courseName": "Master React",
+      "courseLength": "28 days",
+      "price": 2600,
+      "courseTeacher": "Franklin Foster",
+      "courseLocation": "In-person, Tech Campus",
+      "imageUrl": "reactmaster.png",
+      "firstCourseDate": "2024-04-20",
+      "secoundCourseDate": "2024-07-20",
+      "thirdCourseDate": "2024-10-20",
+      "courseDescription": "For seasoned React developers, this course explores sophisticated concepts such as server-side rendering, React Native, and performance optimization in large-scale applications."
+    },
+    {
+      "id": "301",
+      "courseName": "Beginner Node.js",
+      "courseLength": "15 days",
+      "price": 1250,
+      "courseTeacher": "Georgia Green",
+      "courseLocation": "Remote",
+      "imageUrl": "nodejsbeginner.png",
+      "firstCourseDate": "2024-03-05",
+      "secoundCourseDate": "2024-06-05",
+      "thirdCourseDate": "2024-09-05",
+      "courseDescription": "Designed for beginners, this course introduces the fundamentals of Node.js, including basic server-side programming, working with Express, and an introduction to databases."
+    },
+    {
+      "id": "302",
+      "courseName": "Advanced Node.js",
+      "courseLength": "22 days",
+      "price": 1850,
+      "courseTeacher": "Henry Hall",
+      "courseLocation": "Remote",
+      "imageUrl": "nodejsadvance.png",
+      "firstCourseDate": "2024-04-15",
+      "secoundCourseDate": "2024-07-15",
+      "thirdCourseDate": "2024-10-15",
+      "courseDescription": "This course is meant for developers who have some experience with Node.js, covering advanced topics like building RESTful APIs, real-time communication with WebSockets, and working with microservices."
+    },
+    {
+      "id": "303",
+      "courseName": "Master Node.js",
+      "courseLength": "30 days",
+      "price": 2550,
+      "courseTeacher": "Irene Ivy",
+      "courseLocation": "In-person, Tech Campus",
+      "imageUrl": "nodejsmaster.png",
+      "firstCourseDate": "2024-05-20",
+      "secoundCourseDate": "2024-08-20",
+      "thirdCourseDate": "2024-11-20",
+      "courseDescription": "Aimed at experienced Node.js developers, this course delves into complex server-side applications, performance tuning, security best practices, and advanced deployment techniques."
+    },
+    {
+      "id": "401",
+      "courseName": "Beginner Solidity",
+      "courseLength": "18 days",
+      "price": 1500,
+      "courseTeacher": "Jack Johnson",
+      "courseLocation": "Remote",
+      "imageUrl": "soliditybeginner.png",
+      "firstCourseDate": "2024-02-20",
+      "secoundCourseDate": "2024-05-20",
+      "thirdCourseDate": "2024-08-20",
+      "courseDescription": "This introductory course covers the basics of Solidity and smart contract development, focusing on Ethereum blockchain fundamentals, simple smart contract design, and development tools."
+    },
+    {
+      "id": "402",
+      "courseName": "Advanced Solidity",
+      "courseLength": "25 days",
+      "price": 2000,
+      "courseTeacher": "Karen King",
+      "courseLocation": "Remote",
+      "imageUrl": "solidityadvance.png",
+      "firstCourseDate": "2024-03-30",
+      "secoundCourseDate": "2024-06-30",
+      "thirdCourseDate": "2024-09-30",
+      "courseDescription": "Designed for developers with basic Solidity knowledge, this course explores advanced smart contract development techniques, including security practices, optimization, and interacting with complex decentralized applications."
+    },
+    {
+      "id": "403",
+      "courseName": "Master Solidity",
+      "courseLength": "35 days",
+      "price": 2800,
+      "courseTeacher": "Liam Lee",
+      "courseLocation": "In-person, Blockchain Hub",
+      "imageUrl": "soliditymaster.png",
+      "firstCourseDate": "2024-05-10",
+      "secoundCourseDate": "2024-08-10",
+      "thirdCourseDate": "2024-11-10",
+      "courseDescription": "A comprehensive course for experienced Solidity developers, focusing on advanced blockchain concepts, smart contract architecture, decentralized finance applications, and Ethereum 2.0."
+    },
+    {
+      "id": "501",
+      "courseName": "Beginner Python",
+      "courseLength": "16 days",
+      "price": 1300,
+      "courseTeacher": "Molly Morris",
+      "courseLocation": "Remote",
+      "imageUrl": "pythonbeginner.png",
+      "firstCourseDate": "2024-02-25",
+      "secoundCourseDate": "2024-05-25",
+      "thirdCourseDate": "2024-08-25",
+      "courseDescription": "Ideal for beginners, this course covers Python basics, including data types, loops, functions, and error handling, with a focus on practical programming for real-world applications."
+    },
+    {
+      "id": "502",
+      "courseName": "Advanced Python",
+      "courseLength": "23 days",
+      "price": 1900,
+      "courseTeacher": "Nathan Norris",
+      "courseLocation": "Remote",
+      "imageUrl": "pythonadvance.png",
+      "firstCourseDate": "2024-04-10",
+      "secoundCourseDate": "2024-07-10",
+      "thirdCourseDate": "2024-10-10",
+      "courseDescription": "For those with a basic understanding of Python, this course dives into more complex topics like data structures, object-oriented programming, and data manipulation with libraries like Pandas."
+    },
+    {
+      "id": "503",
+      "courseName": "Master Python",
+      "courseLength": "31 days",
+      "price": 2700,
+      "courseTeacher": "Olivia Owens",
+      "courseLocation": "In-person, Tech Campus",
+      "imageUrl": "pythonmaster.png",
+      "firstCourseDate": "2024-03-15",
+      "secoundCourseDate": "2024-06-15",
+      "thirdCourseDate": "2024-09-15",
+      "courseDescription": "Aimed at experienced Python developers, this course explores advanced subjects such as asynchronous programming, advanced data visualization, and working with APIs and databases for web development."
+    },
+    {
+      "id": "104",
+      "courseName": "Legendary Javascripter course",
+      "courseLength": "90 days",
+      "price": "11337",
+      "courseTeacher": "Michael Gustavsson",
+      "courseLocation": "Remote",
+      "imageUrl": "Michaels-AI-image.png",
+      "firstCourseDate": "2024-01-25",
+      "secoundCourseDate": "2024-01-27",
+      "thirdCourseDate": "2024-01-31",
+      "courseDescription": "super duper scripter"
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "userName": "carl@mail.se",
+      "password": "1234",
+      "name": "Carl",
+      "lastName": "Klöfverskjöld",
+      "address": "Järnvägsgatan 41",
+      "BirthDate": "1994-11-09",
+      "courseExams": [
+        {
+          "id": 101,
+          "courseName": "Beginner JavaScript"
+        },
+        {
+          "id": 401,
+          "courseName": "Beginner Solidity"
+        }
+      ]
+    },
+    {
+      "firstName": "Rebecca",
+      "LastName": "klöfverskjöld",
+      "email": "tost@mail.se",
+      "address": "gatan gatan 12",
+      "Phone": "12345",
+      "password": "1234",
+      "repeatPassword": "1234",
+      "id": 2
+    },
+    {
+      "firstName": "Christion",
+      "LastName": "Lopez",
+      "email": "chris@tost.se",
+      "address": "drömgatan 31",
+      "Phone": "16247895691",
+      "password": "4321",
+      "repeatPassword": "4321",
+      "id": 3
+    },
+    {
+      "firstName": "Carlos",
+      "LastName": "karlsson",
+      "email": "carl@manga.se",
+      "address": "addresen 12",
+      "Phone": "123456789",
+      "password": "6789",
+      "repeatPassword": "6789",
+      "id": 4
+    }
+  ],
+  "admin": [
+    {
+      "id": "1",
+      "userName": "admin@mail.se",
+      "password": "1234",
+      "name": "Admin",
+      "lastName": "Adminsson",
+      "address": "Admingatan 41"
+    }
+  ]
+}
+
