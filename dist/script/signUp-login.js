@@ -3,7 +3,6 @@ import { settings } from "../utilities/config.js";
 import { convertFormDataToJson } from "../utilities/convert.js";
 const form = document.querySelector("#signupForm");
 const loginForm = document.querySelector("#loginForm");
-const section = document.querySelector("section");
 /*****************************************************************************/
 /************************* SIGNUP FORM ***************************************/
 /*****************************************************************************/
@@ -38,6 +37,9 @@ const addUser = async (user) => {
     const http = new HttpClient(url);
     await http.add(user);
 };
+/*****************************************************************************/
+/************************* LOGIN FORM ***************************************/
+/*****************************************************************************/
 export const loginHandler = async (e) => {
     e.preventDefault();
     const form = e.target;
@@ -45,35 +47,26 @@ export const loginHandler = async (e) => {
     const passwordInput = form.querySelector('[name="password"]');
     const email = emailInput.value.trim().toLowerCase();
     const password = passwordInput.value;
-    const users = await getAllUsers();
-    console.log("hej från loginHandler");
-    const found = users.find((user) => user.email === email);
-    if (found && found.password === password) {
-        alert("Login success");
-        location.href = "../../student/student-Page.html";
-    }
-    else {
-        alert("Wrong E-mail or Password");
-    }
-};
-const getAllUsers = async () => {
     try {
-        const url = settings.JSON_STUDENT;
-        const http = new HttpClient(url);
-        return http.get();
+        const user = await getUserByEmailAndPassword(email, password);
+        if (user) {
+            alert("Login success");
+            location.href = `../../student/student-Page.html?studentId=${user.id}`;
+        }
+        else {
+            alert("Wrong E-mail or Password");
+        }
     }
     catch (error) {
-        throw error;
+        alert("Login failed");
+        console.error(error);
     }
 };
-/// Här ska jag fortsätta!!
-const getUser = async (id) => {
-    const url = `settings.JSON_STUDENT/${id}`;
+const getUserByEmailAndPassword = async (email, password) => {
+    const url = `${settings.JSON_STUDENT}/?email=${email}&password=${password}`;
     const http = new HttpClient(url);
-    const user = await http.get();
-    if (section) {
-        section.appendChild(createUserInfoCard(user));
-    }
+    const users = await http.get();
+    return users[0];
 };
 if (form) {
     form.addEventListener("submit", addUserhandler);

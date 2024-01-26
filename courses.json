@@ -211,25 +211,6 @@
   ],
   "students": [
     {
-      "id": 1,
-      "userName": "carl@mail.se",
-      "password": "1234",
-      "name": "Carl",
-      "lastName": "Klöfverskjöld",
-      "address": "Järnvägsgatan 41",
-      "BirthDate": "1994-11-09",
-      "courseExams": [
-        {
-          "id": 101,
-          "courseName": "Beginner JavaScript"
-        },
-        {
-          "id": 401,
-          "courseName": "Beginner Solidity"
-        }
-      ]
-    },
-    {
       "firstName": "Rebecca",
       "LastName": "klöfverskjöld",
       "email": "tost@mail.se",
@@ -237,7 +218,24 @@
       "Phone": "12345",
       "password": "1234",
       "repeatPassword": "1234",
-      "id": 2
+      "id": 2,
+      "enrolledCourses": [
+        {
+          "id": "104",
+          "name": "Legendary Javascripter course",
+          "price": "11337"
+        },
+        {
+          "id": "502",
+          "name": "Advanced Python",
+          "price": 1900
+        },
+        {
+          "id": "503",
+          "name": "Master Python",
+          "price": 2700
+        }
+      ]
     },
     {
       "firstName": "Christion",
@@ -247,7 +245,34 @@
       "Phone": "16247895691",
       "password": "4321",
       "repeatPassword": "4321",
-      "id": 3
+      "id": 3,
+      "enrolledCourses": [
+        {
+          "id": "201",
+          "name": "Beginner React",
+          "price": 1300
+        },
+        {
+          "id": "101",
+          "name": "Beginner JavaScript",
+          "price": 1200
+        },
+        {
+          "id": "103",
+          "name": "Master JavaScript",
+          "price": 2500
+        },
+        {
+          "id": "102",
+          "name": "Advanced JavaScript",
+          "price": 1800
+        },
+        {
+          "id": "104",
+          "name": "Legendary Javascripter course",
+          "price": "11337"
+        }
+      ]
     },
     {
       "firstName": "Carlos",
@@ -257,17 +282,66 @@
       "Phone": "123456789",
       "password": "6789",
       "repeatPassword": "6789",
-      "id": 4
-    }
-  ],
-  "admin": [
+      "id": 4,
+      "enrolledCourses": [
+        {
+          "id": "401",
+          "name": "Beginner Solidity",
+          "price": 1500
+        },
+        {
+          "id": "403",
+          "name": "Master Solidity",
+          "price": 2800
+        },
+        {
+          "id": "104",
+          "name": "Legendary Javascripter course",
+          "price": "11337"
+        },
+        {
+          "id": "402",
+          "name": "Advanced Solidity",
+          "price": 2000
+        }
+      ]
+    },
     {
-      "id": "1",
-      "userName": "admin@mail.se",
-      "password": "1234",
-      "name": "Admin",
-      "lastName": "Adminsson",
-      "address": "Admingatan 41"
+      "firstName": "Loke",
+      "LastName": "Larsson",
+      "email": "loke@tost.se",
+      "address": "ganeta 2a",
+      "Phone": "12637845",
+      "password": "loke",
+      "repeatPassword": "loke",
+      "id": 5,
+      "enrolledCourses": [
+        {
+          "id": "202",
+          "name": "Advanced React",
+          "price": 1900
+        },
+        {
+          "id": "401",
+          "name": "Beginner Solidity",
+          "price": 1500
+        },
+        {
+          "id": "201",
+          "name": "Beginner React",
+          "price": 1300
+        },
+        {
+          "id": "104",
+          "name": "Legendary Javascripter course",
+          "price": "11337"
+        },
+        {
+          "id": "203",
+          "name": "Master React",
+          "price": 2600
+        }
+      ]
     }
   ]
 }

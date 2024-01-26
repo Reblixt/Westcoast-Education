@@ -1,4 +1,5 @@
-import { createCard, adminReadMoreClickHandler } from "./dom.js";
+import { createCard } from "./dom.js";
+import { adminReadMoreClickHandler } from "./admin-dom.js";
 import HttpClient from "./http.js";
 import { settings } from "../utilities/config.js";
 

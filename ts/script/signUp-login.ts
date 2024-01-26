@@ -6,7 +6,6 @@ const form = document.querySelector("#signupForm") as HTMLFormElement | null;
 const loginForm = document.querySelector(
   "#loginForm",
 ) as HTMLFormElement | null;
-const section = document.querySelector("section") as HTMLElement;
 
 interface User {
   firstName: string;
@@ -60,11 +59,6 @@ const addUser = async (user: User) => {
 /************************* LOGIN FORM ***************************************/
 /*****************************************************************************/
 
-interface UserLogin {
-  email: string;
-  password: string;
-}
-
 export const loginHandler = async (e: Event) => {
   e.preventDefault();
 
@@ -76,37 +70,25 @@ export const loginHandler = async (e: Event) => {
 
   const email = emailInput.value.trim().toLowerCase();
   const password = passwordInput.value;
-
-  const users = await getAllUsers();
-  console.log("hej från loginHandler");
-
-  const found = users.find((user: UserLogin) => user.email === email);
-  if (found && found.password === password) {
-    alert("Login success");
-    location.href = "../../student/student-Page.html";
-  } else {
-    alert("Wrong E-mail or Password");
-  }
-};
-
-const getAllUsers = async () => {
   try {
-    const url = settings.JSON_STUDENT;
-    const http = new HttpClient(url);
-    return http.get();
+    const user = await getUserByEmailAndPassword(email, password);
+    if (user) {
+      alert("Login success");
+      location.href = `../../student/student-Page.html?studentId=${user.id}`;
+    } else {
+      alert("Wrong E-mail or Password");
+    }
   } catch (error) {
-    throw error;
+    alert("Login failed");
+    console.error(error);
   }
 };
 
-/// Här ska jag fortsätta!!
-const getUser = async (id: number) => {
-  const url = `settings.JSON_STUDENT/${id}`;
+const getUserByEmailAndPassword = async (email: string, password: string) => {
+  const url = `${settings.JSON_STUDENT}/?email=${email}&password=${password}`;
   const http = new HttpClient(url);
-  const user = await http.get();
-  if (section) {
-    section.appendChild(createUserInfoCard(user));
-  }
+  const users = await http.get();
+  return users[0];
 };
 
 if (form) {

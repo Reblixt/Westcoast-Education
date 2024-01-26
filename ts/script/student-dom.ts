@@ -1,11 +1,3 @@
-export const createGoToCartButton = () => {
-  const button = document.createElement("button");
-  button.textContent = "Continue to cart";
-  button.id = "cartBtn";
-  const target = document.querySelector("#checkoutContainer")!;
-  target.appendChild(button);
-};
-
 const getFromStorage = (key: string) => {
   const keyitem = `course-${key}`;
   const courseInfo = localStorage.getItem(keyitem);
@@ -30,15 +22,18 @@ export const createCheckoutCard = () => {
     const courseInfo = getFromStorage(productId);
     if (courseInfo) {
       const courseData = JSON.parse(courseInfo);
-      const courseText = `${courseData.name} - Price: ${courseData.price}`;
+      const coursePrice = parseFloat(courseData.price); // Konverterar priset till ett tal
+      const courseText = `${courseData.name} - Price: ${coursePrice}`;
 
       const selectedCourse = document.createElement("p");
       selectedCourse.textContent = courseText;
       document.querySelector("#checkoutContainer")!.appendChild(selectedCourse);
 
-      totalPrice += courseData.price;
+      totalPrice += coursePrice;
     }
   });
+
+  // Här kan du också hantera att visa totalPrice någonstans i gränssnittet
 
   const totalSumElement = document.createElement("p");
   totalSumElement.textContent = `Total sum: ${totalPrice} SEK`;
@@ -49,19 +44,94 @@ export const createCheckoutCard = () => {
   buyButton.id = "buyBtn";
   document.querySelector("#checkoutContainer")!.appendChild(buyButton);
 };
+ interface Course {
+  id: number;
+  name: string;
 
-// fortsätta här imorgen.
-const createUserInfoCard = (user: string) => {
+export default interface User {
+  id: number;
+  firstName: string;
+  lastName: string;
+  email: string;
+  address: string;
+  phone: string;
+  enrolledCourse: Course[];
+}
+
+export const createUserInfoCard = (user: User, container) => {
   const div = document.createElement("div");
-  div.id = "userProfile";
-  const h2 = document.createElement("h2");
-  h2.appendChild(document.createTextNode("Student profile"));
+  div.className = `userPofile-${user.id}`
 
-  const firstName = document.createElement("p");
-  firstName.appendChild(document.createTextNode(`First name: ${user.id}`));
-  firstName.id = user.id;
-  const email = document.createElement("p");
-  const address = document.createElement("p");
-  const phone = document.createElement("p");
-  const id = document.createElement("p");
+  const h2 = document.createElement("h2");
+  h2.textContent = "Student Profile";
+
+  const firstNameP = document.createElement("p");
+  firstNameP.textContent = `First name: ${user.firstName}`;
+
+  const lastNameP = document.createElement("p");
+  lastNameP.textContent = `Last name: ${user.lastName}`;
+
+  const emailP = document.createElement("p");
+  emailP.textContent = `Email: ${user.email}`;
+
+  const addressP = document.createElement("p");
+  addressP.textContent = `Address: ${user.address}`;
+
+  const phoneP = document.createElement("p");
+  phoneP.textContent = `Phone: ${user.phone}`;
+
+  const idP = document.createElement("p");
+  idP.textContent = `ID: ${user.id}`;
+
+  div.appendChild(h2);
+  div.appendChild(firstNameP);
+  div.appendChild(lastNameP);
+  div.appendChild(emailP);
+  div.appendChild(addressP);
+  div.appendChild(phoneP);
+  div.appendChild(idP);
+
+  container.appendChild(div);
 };
+
+
+export const createClearLocalStorageButton = (
+  className: string,
+  text: string,
+  clearFuction: () => void,
+) => {
+  const clearButton = document.createElement("button")!;
+  clearButton.classList.add("clearBtn");
+  clearButton.id = "clearBtn";
+  clearButton.innerText = text;
+  document.querySelector(className)!.appendChild(clearButton);
+
+  clearButton.addEventListener("click", clearFuction);
+
+  return clearButton;
+};
+
+
+export const createEnrollodCoursesCard = (student, container) => {
+  // Kontrollera om studenten har några inskrivna kurser
+  if (!student.enrolledCourses || student.enrolledCourses.length === 0) {
+    console.log(`Inga inskrivna kurser för student ${student.id}`);
+    return;
+  }
+
+  student.enrolledCourses.forEach(course => {
+    const enrolledCard = document.createElement('div');
+    
+    const courseId = document.createElement('p');
+    courseId.textContent = `Course ID: ${course.id}`;
+    
+    const courseName = document.createElement('p');
+    courseName.textContent = `Course Name: ${course.name}`;
+
+    enrolledCard.appendChild(courseId);
+    enrolledCard.appendChild(courseName);
+
+      container.appendChild(enrolledCard);
+    
+  });
+}

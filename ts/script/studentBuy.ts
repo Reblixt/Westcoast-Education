@@ -1,11 +1,45 @@
 import { initLoadAdminCourse } from "./admin-course-list.js";
+import {
+  createClearLocalStorageButton,
+  createUserInfoCard,
+  User,
+} from "./student-dom.js";
 import { settings } from "../utilities/config.js";
 import HttpClient from "./http.js";
 
-export const initStudentBuyPage = () => {
+export const initStudentBuyPage = async () => {
+  const courseIdStr = location.search.split("=")[1];
+  const courseId = parseInt(courseIdStr, 10);
+  console.log(courseId);
+
+  const user = await getUserById(courseId);
+  if (user) {
+    createUserInfoCard(user);
+  } else {
+    console.log("User not found");
+  }
+
   initLoadAdminCourse();
-  console.log("hello");
+
   getCourse();
+
+  createClearLocalStorageButton(
+    ".checkoutContainer",
+    "Clear selected",
+    handleClearClick,
+  );
+};
+
+const getUserById = async (id: number): Promise<User | null> => {
+  const url = `${settings.JSON_STUDENT}/${id}`;
+  const http = new HttpClient(url);
+  try {
+    const user = await http.get();
+    return user;
+  } catch (error) {
+    console.error("Error fetching user:", error);
+    return null;
+  }
 };
 
 const getCourse = async () => {
@@ -54,4 +88,59 @@ function handleSaveClick(course: any) {
       saveButton.style.backgroundColor = "#fcfcfd";
     }
   }
+}
+
+function handleClearClick() {
+  localStorage.clear();
+  const addButtons = document.querySelectorAll("[id$='-addButton']")!;
+
+  addButtons.forEach((button) => {
+    const htmlButton = button as HTMLElement;
+    htmlButton.textContent = "Add";
+    htmlButton.style.backgroundColor = "#fcfcfd";
+  });
+}
+
+const enrollCourses = async () => {
+  const studentIdStr = location.search.split("=")[1];
+  const studentId = parseInt(studentIdStr, 10);
+
+  try {
+    // Använd getUserById för att hämta befintlig användarinformation
+    const currentUserData = await getUserById(studentId);
+
+    if (currentUserData) {
+      // Hämta kurser från localStorage
+      const keys = Object.keys(localStorage);
+      const courseKeys = keys.filter((key) => key.startsWith("course-"));
+      const newCourses = courseKeys
+        .map((key) => {
+          const item = localStorage.getItem(key);
+          return item ? JSON.parse(item) : null;
+        })
+        .filter((course) => course !== null);
+
+      const updatedUserData = {
+        ...currentUserData,
+        enrolledCourses: [
+          ...(currentUserData.enrolledCourses || []),
+          ...newCourses,
+        ],
+      };
+
+      const updateUserUrl = `${settings.JSON_STUDENT}/${studentId}`;
+      const updateHttp = new HttpClient(updateUserUrl);
+      await updateHttp.update(updatedUserData);
+      alert("Courses enrolled");
+    } else {
+      console.log("User not found");
+    }
+  } catch (error) {
+    console.log("Failed to enroll course", error);
+  }
+};
+
+const enrollButton = document.getElementById("enrollBtn");
+if (enrollButton) {
+  enrollButton.addEventListener("click", enrollCourses);
 }

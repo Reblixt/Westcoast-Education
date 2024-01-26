@@ -68,16 +68,6 @@ const readMoreClickHandler = (readButtons) => {
         });
     });
 };
-const adminReadMoreClickHandler = (readButtons) => {
-    readButtons.forEach((readbutton) => {
-        const src = readbutton.getAttribute("src");
-        const courseId = readbutton.getAttribute("id");
-        readbutton.addEventListener("click", () => {
-            console.log(location);
-            location.href = `/admin/edit-Course-Page.html?id=${courseId}`;
-        });
-    });
-};
 const createDateInfo = (course) => {
     const firstDate = document.createElement("p");
     firstDate.classList.add("dates");
@@ -98,12 +88,4 @@ const createCompleteCourseCard = (course) => {
     });
     return div;
 };
-const createClearLocalStorageButton = (className, text) => {
-    const clearButton = document.createElement("button");
-    clearButton.classList.add("clearBtn");
-    clearButton.id = "clearBtn";
-    clearButton.innerText = text;
-    document.querySelector(className).appendChild(clearButton);
-    return clearButton;
-};
-export { createCard, readMoreClickHandler, adminReadMoreClickHandler, createCompleteCourseCard, createClearLocalStorageButton, };
+export { createCard, readMoreClickHandler, createCompleteCourseCard };

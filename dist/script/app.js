@@ -6,7 +6,7 @@ import { initStudentBuyPage } from "./studentBuy.js";
 import { addCourseHandler } from "./add-course-admin.js";
 import { initLoadAdminCourse } from "./admin-course-list.js";
 import { initEditCoursePage } from "./edit-course-admin.js";
-import { createCheckoutCard } from "./student-dom.js";
+import { initenrolledList } from "./dom/enrolled-course-list.js";
 async function initPage() {
     switch (state.currentPage) {
         case "/":
@@ -29,12 +29,12 @@ async function initPage() {
         case "/student/student-Page.html":
             initStudentBuyPage();
             break;
-        case "/student/student-Checkout-Page.html":
-            createCheckoutCard();
-            break;
         case "/admin/index.html":
             console.log("hello from admin course list");
             initLoadAdminCourse();
+            break;
+        case "/admin/enrolled-Courses-Page.html":
+            initenrolledList();
             break;
         case "/admin/add-Course-Page.html":
             console.log("hello from add Course list");
