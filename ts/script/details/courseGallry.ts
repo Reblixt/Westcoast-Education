@@ -1,6 +1,6 @@
-import { createCard, readMoreClickHandler } from "./dom.js";
-import HttpClient from "./http.js";
-import { settings } from "../utilities/config.js";
+import { createCard, readMoreClickHandler } from "../dom/dom.js";
+import HttpClient from "../http.js";
+import { settings } from "../../utilities/config.js";
 
 export const initLoadCourse = async () => {
   try {

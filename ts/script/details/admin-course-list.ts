@@ -1,7 +1,7 @@
-import { createCard } from "./dom.js";
-import { adminReadMoreClickHandler } from "./admin-dom.js";
-import HttpClient from "./http.js";
-import { settings } from "../utilities/config.js";
+import { createCard } from "../dom/dom.js";
+import { adminReadMoreClickHandler } from "../dom/admin-dom.js";
+import HttpClient from "../http.js";
+import { settings } from "../../utilities/config.js";
 
 export const initLoadAdminCourse = async () => {
   try {

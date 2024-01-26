@@ -3,7 +3,7 @@ import HttpClient from "../http.js";
 import {
   createEnrollodCoursesCard,
   createUserInfoCard,
-} from "../student-dom.js";
+} from "./student-dom.js";
 
 export const initenrolledList = async () => {
   userInfo();

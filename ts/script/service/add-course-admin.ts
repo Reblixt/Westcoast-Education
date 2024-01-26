@@ -1,6 +1,6 @@
-import HttpClient from "./http.js";
-import { convertFormDataToJson } from "../utilities/convert.js";
-import { settings } from "../utilities/config.js";
+import HttpClient from "../http.js";
+import { convertFormDataToJson } from "../../utilities/convert.js";
+import { settings } from "../../utilities/config.js";
 
 const form = document.querySelector("#addForm") as HTMLFormElement;
 

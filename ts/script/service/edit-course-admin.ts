@@ -1,6 +1,6 @@
-import HttpClient from "./http.js";
-import { settings } from "../utilities/config.js";
-import { convertFormDataToJson } from "../utilities/convert.js";
+import HttpClient from "../http.js";
+import { settings } from "../../utilities/config.js";
+import { convertFormDataToJson } from "../../utilities/convert.js";
 
 const form = document.querySelector("#updateDeleteForm") as HTMLFormElement;
 const deleteButton = document.querySelector(

@@ -1,16 +1,15 @@
-import { initLoadAdminCourse } from "./admin-course-list.js";
+import { initLoadAdminCourse } from "../details/admin-course-list.js";
 import {
   createClearLocalStorageButton,
   createUserInfoCard,
   User,
-} from "./student-dom.js";
-import { settings } from "../utilities/config.js";
-import HttpClient from "./http.js";
+} from "../dom/student-dom.js";
+import { settings } from "../../utilities/config.js";
+import HttpClient from "../http.js";
 
 export const initStudentBuyPage = async () => {
   const courseIdStr = location.search.split("=")[1];
   const courseId = parseInt(courseIdStr, 10);
-  console.log(courseId);
 
   const mainContainer = document.querySelector("section")!;
 
@@ -52,7 +51,6 @@ const getCourse = async () => {
 
     if (courses) {
       courses.forEach((course: any) => {
-        console.log(course.id);
         const buttonId = `${course.id}-addButton`;
         const saveButton = document.getElementById(buttonId);
 

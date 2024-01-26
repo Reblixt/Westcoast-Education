@@ -1,6 +1,6 @@
-import { createCompleteCourseCard } from "./dom.js";
-import HttpClient from "./http.js";
-import { settings } from "../utilities/config.js";
+import { createCompleteCourseCard } from "../dom/dom.js";
+import HttpClient from "../http.js";
+import { settings } from "../../utilities/config.js";
 
 const courseCard = document.querySelector(".coursePageDesc");
 
