@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="../content/css/index.css" rel="stylesheet" />
+    <script src="../dist/script/app.js" type="module" defer></script>
+    <title>Westcoast Education</title>
+  </head>
+  <body>
+    <header>
+      <img
+        src="../content/images/logo.png"
+        alt="Logo of the Schools icon"
+        class="navImg"
+        width="90px"
+        height="90px"
+      />
+      <h1 class="navtitle">Westcoast Education</h1>
+      <nav>
+        <ul id="navInfo" class="navInfo">
+          <li><a href="About-us-Page.html">About us |</a></li>
+          <li><a href="Contact-Page.html">Contact |</a></li>
+          <li><a href="../index.html">Courses</a></li>
+        </ul>
+        <ul id="navLogin" class="navLogin">
+          <li><a href="index.html"> Admin course list</a></li>
+          <li><a href="add-Course-Page.html"> Add course </a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h1 class="pageTitle">Add course</h1>
+      </section>
+
+      <article id="addUpdateContainer" class="addUpdateContainer">
+        <form id="addForm" class="addUpdateForm">
+          <input type="number" name="id" placeholder="Course Id" />
+          <input type="text" name="courseName" placeholder="Course Name" />
+          <input type="text" name="courseLength" placeholder="Course Length" />
+          <input type="number" name="price" placeholder="Course Price" />
+          <input
+            type="text"
+            name="courseTeacher"
+            placeholder="Course Teacher"
+          />
+          <input
+            type="text"
+            name="courseLocation"
+            placeholder="Remote or Location"
+          />
+          <input type="date" name="firstCourseDate" id="firstCourseDate" />
+          <input type="date" name="secoundCourseDate" id="secoundCourseDate" />
+          <input type="date" name="thirdCourseDate" id="thirdCourseDate" />
+          <input
+            type="text"
+            name="courseDescription"
+            placeholder="Course Description"
+            class="inputDescription"
+          />
+          <button type="submit" id="addCourseBtn" class="addCourseBtn">
+            Add Course
+          </button>
+        </form>
+      </article>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>

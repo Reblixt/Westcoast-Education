@@ -1,0 +1,51 @@
+.logSignContainer {
+  align-content: center;
+  justify-content: center;
+  margin: 80px;
+  display: flex;
+  flex-direction: row;
+
+  .signupContainer {
+    padding: 20px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    background-color: #b1b2b5;
+    align-items: center;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      input {
+        margin: 5px;
+        width: 100%;
+      }
+      button {
+        width: 50%;
+        transform: translateX(50%);
+      }
+    }
+  }
+
+  .loginContainer {
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    background-color: #b1b2b5;
+    form {
+      display: flex;
+      flex-direction: column;
+      input {
+        margin: 5px;
+        width: 100%;
+      }
+      button {
+        width: 50%;
+        transform: translateX(50%);
+      }
+    }
+  }
+}
