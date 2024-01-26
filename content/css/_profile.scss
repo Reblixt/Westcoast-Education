@@ -1,0 +1,19 @@
+section {
+  div {
+    margin: 5px;
+    background-color: lightgray;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+
+    h2 {
+      margin: 5px;
+    }
+    p {
+      padding: 2px;
+    }
+  }
+}

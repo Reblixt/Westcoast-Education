@@ -19,7 +19,7 @@ const userInfo = async () => {
   const users = await getAllUser();
   const mainContainer = document.querySelector("section");
 
-  users.forEach((user: string) => {
+  users.forEach((user: any) => {
     const userContainer = document.createElement("div");
     userContainer.className = `user-profile-${user.id}`;
 

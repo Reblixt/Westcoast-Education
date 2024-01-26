@@ -541,4 +541,21 @@ main .activeCoursesContainer div button button.active {
   color: yellow;
 }
 
+section div {
+  margin: 5px;
+  background-color: lightgray;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+section div h2 {
+  margin: 5px;
+}
+section div p {
+  padding: 2px;
+}
+
 /*# sourceMappingURL=index.css.map */

@@ -44,23 +44,24 @@ export const createCheckoutCard = () => {
   buyButton.id = "buyBtn";
   document.querySelector("#checkoutContainer")!.appendChild(buyButton);
 };
- interface Course {
+export interface Course {
   id: number;
   name: string;
+}
 
-export default interface User {
+export interface User {
   id: number;
   firstName: string;
   lastName: string;
   email: string;
   address: string;
   phone: string;
-  enrolledCourse: Course[];
+  enrolledCourses: Course[];
 }
 
-export const createUserInfoCard = (user: User, container) => {
+export const createUserInfoCard = (user: User, container: HTMLElement) => {
   const div = document.createElement("div");
-  div.className = `userPofile-${user.id}`
+  div.className = `userPofile-${user.id}`;
 
   const h2 = document.createElement("h2");
   h2.textContent = "Student Profile";
@@ -94,7 +95,6 @@ export const createUserInfoCard = (user: User, container) => {
   container.appendChild(div);
 };
 
-
 export const createClearLocalStorageButton = (
   className: string,
   text: string,
@@ -111,27 +111,28 @@ export const createClearLocalStorageButton = (
   return clearButton;
 };
 
-
-export const createEnrollodCoursesCard = (student, container) => {
+export const createEnrollodCoursesCard = (
+  student: User,
+  container: HTMLElement,
+) => {
   // Kontrollera om studenten har några inskrivna kurser
   if (!student.enrolledCourses || student.enrolledCourses.length === 0) {
     console.log(`Inga inskrivna kurser för student ${student.id}`);
     return;
   }
 
-  student.enrolledCourses.forEach(course => {
-    const enrolledCard = document.createElement('div');
-    
-    const courseId = document.createElement('p');
+  student.enrolledCourses.forEach((course) => {
+    const enrolledCard = document.createElement("div");
+
+    const courseId = document.createElement("p");
     courseId.textContent = `Course ID: ${course.id}`;
-    
-    const courseName = document.createElement('p');
+
+    const courseName = document.createElement("p");
     courseName.textContent = `Course Name: ${course.name}`;
 
     enrolledCard.appendChild(courseId);
     enrolledCard.appendChild(courseName);
 
-      container.appendChild(enrolledCard);
-    
+    container.appendChild(enrolledCard);
   });
-}
+};

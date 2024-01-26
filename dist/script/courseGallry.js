@@ -13,6 +13,12 @@ export const initLoadCourse = async () => {
             });
             const readButtons = document.querySelectorAll(".course-image .info-button");
             readMoreClickHandler(readButtons);
+            const addButtons = document.querySelectorAll(".course-button");
+            addButtons.forEach((button) => {
+                if (button instanceof HTMLElement) {
+                    button.style.display = "none";
+                }
+            });
         }
         else {
             console.log("Gallery elementet hittades inte");

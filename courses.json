@@ -234,6 +234,31 @@
           "id": "503",
           "name": "Master Python",
           "price": 2700
+        },
+        {
+          "id": "303",
+          "name": "Master Node.js",
+          "price": 2550
+        },
+        {
+          "id": "301",
+          "name": "Beginner Node.js",
+          "price": 1250
+        },
+        {
+          "id": "302",
+          "name": "Advanced Node.js",
+          "price": 1850
+        },
+        {
+          "id": "101",
+          "name": "Beginner JavaScript",
+          "price": 1200
+        },
+        {
+          "id": "203",
+          "name": "Master React",
+          "price": 2600
         }
       ]
     },
@@ -345,4 +370,3 @@
     }
   ]
 }
-

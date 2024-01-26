@@ -12,9 +12,11 @@ export const initStudentBuyPage = async () => {
   const courseId = parseInt(courseIdStr, 10);
   console.log(courseId);
 
+  const mainContainer = document.querySelector("section")!;
+
   const user = await getUserById(courseId);
   if (user) {
-    createUserInfoCard(user);
+    createUserInfoCard(user, mainContainer);
   } else {
     console.log("User not found");
   }

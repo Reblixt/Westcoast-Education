@@ -16,12 +16,10 @@ const displayCourseDetails = async (id: any) => {
   if (courseCard) {
     courseCard.appendChild(createCompleteCourseCard(course));
 
-    const infoButton = document.querySelector(".info-button") as HTMLElement;
-    if (infoButton) {
-      infoButton.style.display = "none";
-    } else {
-      console.log("Kan inte hitta .info-button elementet");
-    }
+    const infoButton = document.querySelector(".info-button")! as HTMLElement;
+    const addButton = document.querySelector(".course-button")! as HTMLElement;
+    infoButton.style.display = "none";
+    addButton.style.display = "none";
   } else {
     console.log("hittar inte denna element");
   }

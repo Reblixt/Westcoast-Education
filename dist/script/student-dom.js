@@ -76,11 +76,11 @@ export const createEnrollodCoursesCard = (student, container) => {
         console.log(`Inga inskrivna kurser för student ${student.id}`);
         return;
     }
-    student.enrolledCourses.forEach(course => {
-        const enrolledCard = document.createElement('div');
-        const courseId = document.createElement('p');
+    student.enrolledCourses.forEach((course) => {
+        const enrolledCard = document.createElement("div");
+        const courseId = document.createElement("p");
         courseId.textContent = `Course ID: ${course.id}`;
-        const courseName = document.createElement('p');
+        const courseName = document.createElement("p");
         courseName.textContent = `Course Name: ${course.name}`;
         enrolledCard.appendChild(courseId);
         enrolledCard.appendChild(courseName);

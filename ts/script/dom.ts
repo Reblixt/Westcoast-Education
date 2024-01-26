@@ -21,8 +21,6 @@ const createCard = (course: any) => {
 const createImg = (imageUrl: string, id: any) => {
   const img = document.createElement("img");
   img.setAttribute("src", `../content/images/${imageUrl}`);
-  //  img.setAttribute("id", id);
-  // img.setAttribute("style", "height:125px; width:125px");
   return img;
 };
 
